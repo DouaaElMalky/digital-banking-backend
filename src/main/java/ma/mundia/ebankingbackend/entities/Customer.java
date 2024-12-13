@@ -1,5 +1,6 @@
 package ma.mundia.ebankingbackend.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,5 +16,6 @@ public class Customer {
     private String email;
 
     @OneToMany(mappedBy = "customer") //Dans la classe BankAccount y'a un attribut "customer" qui utilise @ManyToOne et il s'agit de la meme relation
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private List<BankAccount> bankAccounts;
 }
