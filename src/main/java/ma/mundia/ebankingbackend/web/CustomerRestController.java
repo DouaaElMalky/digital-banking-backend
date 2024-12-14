@@ -28,4 +28,15 @@ public class CustomerRestController {
     public CustomerDTO saveCustomer(@RequestBody CustomerDTO customerDTO){
         return bankAccountService.saveCustomer(customerDTO);
     }
+
+    @PutMapping("/customers/{customerId}")
+    public CustomerDTO updateCustomer(@PathVariable Long customerId, @RequestBody CustomerDTO customerDTO){
+        customerDTO.setId(customerId);
+        return bankAccountService.updateCustomer(customerDTO);
+    }
+
+    @DeleteMapping("/customers/{id}")
+    public void deleteCustomer(@PathVariable Long id){
+        bankAccountService.deleteCustomer(id);
+    }
 }
