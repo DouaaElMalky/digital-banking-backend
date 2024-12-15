@@ -39,14 +39,30 @@
 <img src="captures/customerIdSwagger.jpg">
 <h3>Ajout d'un client</h3>
 <img src="captures/addCustomerPostman.jpg">
-
 <h3>Liste des clients avant la suppression</h3>
 <img src="captures/clientsAvantSupp.jpg">
 
-<h3>Suppression d'un client</h3>
+<h2>Suppression d'un client</h2>
 <img src="captures/suppressionClient.jpg">
+
 <h2>Modification d'un client</h2>
 <h3>Avant la modification</h3>
 <img src="captures/clientAvantModif.jpg">
 <h3>Après la modification</h3>
 <img src="captures/clientApresModif.jpg">
+
+<h2>Gestion des opérations bancaires</h2>
+<h3>Augmentation du solde d'un compte bancaire</h3>
+<h3>Solde avant l'opération</h3>
+<img src="captures/soldeAvantOp.jpg">
+<h3>Solde après l'opération</h3>
+<img src="captures/soldeApresOpSwagger.jpg">
+<img src="captures/soldeApresOp.jpg">
+<h3>Diminution du solde d'un compte bancaire</h3>
+<h3>Solde avant l'opération</h3>
+<img src="captures/debitAvant.jpg">
+<h3>Solde après l'opération</h3>
+<img src="captures/debitApresSwagger.jpg">
+<img src="captures/debitApres.jpg">
+
+<h2>Gestion des virements bancaires</h2>
