@@ -13,6 +13,8 @@ import ma.mundia.ebankingbackend.mappers.BankAccountMapperImpl;
 import ma.mundia.ebankingbackend.repositories.AccountOperationRepository;
 import ma.mundia.ebankingbackend.repositories.BankAccountRepository;
 import ma.mundia.ebankingbackend.repositories.CustomerRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -171,21 +173,21 @@ public class BankAccountServiceImpl implements BankAccountService{
         List<AccountOperation> accountOperations = accountOperationRepository.findByBankAccountId(accountId);
         return accountOperations.stream().map(op->dtoMapper.fromAccountOperation(op)).collect(Collectors.toList());
     }
-//
-//    @Override
-//    public AccountHistoryDTO getAccountHistory(String accountId, int page, int size) throws BankAccountNotFoundException {
-//        BankAccount bankAccount= bankAccountRepository.findById(accountId).orElse(null);
-//        if (bankAccount==null) throw new BankAccountNotFoundException("Account not found");
-//        Page<AccountOperation> accountOperations = accountOperationRepository.findByBankAccount_Id(accountId, PageRequest.of(page, size));
-//        List<AccountOperationDTO> accountOperationDTOs = accountOperations.getContent().stream().map(op -> dtoMapper.fromAccountOperation(op)).collect(Collectors.toList());
-//        AccountHistoryDTO accountHistoryDTO= new AccountHistoryDTO();
-//        accountHistoryDTO.setAccountOperationDTOS(accountOperationDTOs);
-//        accountHistoryDTO.setAccountId(bankAccount.getId());
-//        accountHistoryDTO.setBalance(bankAccount.getBalance());
-//        accountHistoryDTO.setCurrentPage(page);
-//        accountHistoryDTO.setPageSize(size);
-//        accountHistoryDTO.setTotalPages(accountOperations.getTotalPages());
-//        return accountHistoryDTO;
-//    }
+
+    @Override
+    public AccountHistoryDTO getAccountHistory(String accountId, int page, int size) throws BankAccountNotFoundException {
+        BankAccount bankAccount= bankAccountRepository.findById(accountId).orElse(null);
+        if (bankAccount==null) throw new BankAccountNotFoundException("Account not found");
+        Page<AccountOperation> accountOperations = accountOperationRepository.findByBankAccountId(accountId, PageRequest.of(page, size));
+        List<AccountOperationDTO> accountOperationDTOs = accountOperations.getContent().stream().map(op -> dtoMapper.fromAccountOperation(op)).collect(Collectors.toList());
+        AccountHistoryDTO accountHistoryDTO= new AccountHistoryDTO();
+        accountHistoryDTO.setAccountOperationDTOS(accountOperationDTOs);
+        accountHistoryDTO.setAccountId(bankAccount.getId());
+        accountHistoryDTO.setBalance(bankAccount.getBalance());
+        accountHistoryDTO.setCurrentPage(page);
+        accountHistoryDTO.setPageSize(size);
+        accountHistoryDTO.setTotalPages(accountOperations.getTotalPages());
+        return accountHistoryDTO;
+    }
 
 }
