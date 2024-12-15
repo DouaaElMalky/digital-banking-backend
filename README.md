@@ -23,6 +23,7 @@
 <img src="captures/accountIdOperationsSwagger.jpg">
 <h3>Récupération paginée des opérations d'un compte bancaire d'après son ID</h3>
 <img src="captures/accountIdOperationsPage0&size=3.jpg">
+<img src="captures/accountIdOperationsPage0&size=3.jpg">
 <h3>Récupération paginée des opérations d'un compte bancaire d'après son ID</h3>
 <img src="captures/accountIdOperationsPage0&size=3Swagger.jpg">
 
