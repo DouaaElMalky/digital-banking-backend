@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @Slf4j
+//@RequestMapping("/")
 public class CustomerRestController {
     private BankAccountService bankAccountService;
     @GetMapping("/customers")
