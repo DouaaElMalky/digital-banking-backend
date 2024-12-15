@@ -15,16 +15,15 @@
 <img src="captures/accountIdSwagger.jpg">
 <h3>Affichage des opérations d'un compte bancaire d'après son ID</h3>
 <img src="captures/accountIdOperations.jpg">
-<h3>Affichage des opérations d'un compte bancaire d'après son ID</h3>
+<h3>Affichage des opérations d'un compte bancaire d'après son ID au niveau de Swagger</h3>
 <img src="captures/accountIdOperationsSwagger.jpg">
 <h3>Affichage de la page des opérations d'un compte bancaire d'après son ID</h3>
 <img src="captures/accountIdOperations.jpg">
-<h3>Affichage de la page des opérations d'un compte bancaire d'après son ID</h3>
+<h3>Affichage de la page des opérations d'un compte bancaire d'après son ID au niveau de Swagger</h3>
 <img src="captures/accountIdOperationsSwagger.jpg">
 <h3>Récupération paginée des opérations d'un compte bancaire d'après son ID</h3>
 <img src="captures/accountIdOperationsPage0&size=3.jpg">
-<img src="captures/accountIdOperationsPage0&size=3.jpg">
-<h3>Récupération paginée des opérations d'un compte bancaire d'après son ID</h3>
+<h3>Récupération paginée des opérations d'un compte bancaire d'après son ID au niveau de Swagger</h3>
 <img src="captures/accountIdOperationsPage0&size=3Swagger.jpg">
 
 <h2>Gestion des clients</h2>
@@ -45,7 +44,7 @@
 <img src="captures/listeClientsAvantSuppresion.jpg">
 
 <h3>Suppression d'un client</h3>
-<img src="captures/SuppressionClient.jpg">
+<img src="captures/suppressionClient.jpg">
 
 <h2>Modification d'un client</h2>
 <h3>Avant la modification</h3>
