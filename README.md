@@ -41,7 +41,7 @@
 <img src="captures/addCustomerPostman.jpg">
 
 <h3>Liste des clients avant la suppression</h3>
-<img src="captures/listeClientsAvantSuppresion.jpg">
+<img src="captures/listeClientsAvantSuppresion![listeClientsAvantSuppression.jpg](captures%2FlisteClientsAvantSuppression.jpg).jpg">
 
 <h3>Suppression d'un client</h3>
 <img src="captures/suppressionClient.jpg">
