@@ -66,3 +66,8 @@
 <img src="captures/debitApres.jpg">
 
 <h2>Gestion des virements bancaires</h2>
+<h3>Avant le virement bancaire</h3>
+<img src="captures/virementAv.jpg"> 
+<h3>Après le virement bancaire</h3>
+<img src="captures/virementApresSwagger.jpg">
+<img src="captures/virementApres.jpg">
