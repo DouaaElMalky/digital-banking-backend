@@ -33,6 +33,8 @@
 <img src="captures/allCustomers.jpg">
 <h3>Affichage de la liste des clients au niveau de Swagger</h3>
 <img src="captures/allCustomersSwagger.jpg">
+<h3>Rechercher un client par mot cle</h3>
+<img src="captures/searchCustomer.jpg">>
 <h3>Affichage d'un client par son ID</h3>
 <img src="captures/customerId.jpg">
 <h3>Affichage d'un client par son ID au niveau de Swagger</h3>
