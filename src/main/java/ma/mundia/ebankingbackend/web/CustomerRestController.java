@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @Slf4j
+@CrossOrigin("*") //* : authorise tous les donnees
 //@RequestMapping("/")
 public class CustomerRestController {
     private BankAccountService bankAccountService;
