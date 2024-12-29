@@ -1,4 +1,4 @@
-<h1>Projet JEE - Digital banking</h1>
+<h1>Projet JEE - Digital banking - Backend</h1>
 <p>Une application de gestion de comptes bancaires où chaque client possède des comptes (courants ou épargnes) pouvant enregistrer des opérations de débit et crédit.</p>
 
 <h2>Base de données MySQL</h2>
