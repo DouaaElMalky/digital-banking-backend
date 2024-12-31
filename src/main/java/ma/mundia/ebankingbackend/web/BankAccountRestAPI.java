@@ -1,8 +1,6 @@
 package ma.mundia.ebankingbackend.web;
 
-import ma.mundia.ebankingbackend.dtos.AccountHistoryDTO;
-import ma.mundia.ebankingbackend.dtos.AccountOperationDTO;
-import ma.mundia.ebankingbackend.dtos.BankAccountDTO;
+import ma.mundia.ebankingbackend.dtos.*;
 import ma.mundia.ebankingbackend.exceptions.BalanceNotSufficentException;
 import ma.mundia.ebankingbackend.exceptions.BankAccountNotFoundException;
 import ma.mundia.ebankingbackend.services.BankAccountService;
@@ -42,28 +40,49 @@ public class BankAccountRestAPI {
         return bankAccountService.getAccountHistory(accountId, page, size);
     }
 
-    @PostMapping("/accounts/{accountId}/debit")
-    public void debit(
-            @PathVariable String accountId,
-            @RequestParam double amount,
-            @RequestParam String description) throws BankAccountNotFoundException, BalanceNotSufficentException {
-        bankAccountService.debit(accountId, amount, description);
+//    @PostMapping("/accounts/{accountId}/debit")
+//    public void debit(
+//            @PathVariable String accountId,
+//            @RequestParam double amount,
+//            @RequestParam String description) throws BankAccountNotFoundException, BalanceNotSufficentException {
+//        bankAccountService.debit(accountId, amount, description);
+//    }
+//
+//    @PostMapping("/accounts/{accountId}/credit")
+//    public void credit(
+//            @PathVariable String accountId,
+//            @RequestParam double amount,
+//            @RequestParam String description) throws BankAccountNotFoundException {
+//        bankAccountService.credit(accountId, amount, description);
+//    }
+//
+//    @PostMapping("/accounts/transfer")
+//    public void transfer(
+//            @RequestParam String accountIdSource,
+//            @RequestParam String accountIdDestination,
+//            @RequestParam double amount) throws BankAccountNotFoundException, BalanceNotSufficentException {
+//        bankAccountService.transfer(accountIdSource, accountIdDestination, amount);
+//    }
+
+    @PostMapping("/accounts/debit")
+    public DebitDTO debit(@RequestBody DebitDTO debitDTO) throws BankAccountNotFoundException, BalanceNotSufficentException {
+        this.bankAccountService.debit(debitDTO.getAccountId(), debitDTO.getAmount(), debitDTO.getDescription());
+        return debitDTO;
     }
 
-    @PostMapping("/accounts/{accountId}/credit")
-    public void credit(
-            @PathVariable String accountId,
-            @RequestParam double amount,
-            @RequestParam String description) throws BankAccountNotFoundException {
-        bankAccountService.credit(accountId, amount, description);
+    @PostMapping("/accounts/credit")
+    public CreditDTO credit(@RequestBody CreditDTO creditDTO) throws BankAccountNotFoundException {
+        this.bankAccountService.credit(creditDTO.getAccountId(), creditDTO.getAmount(), creditDTO.getDescription());
+        return creditDTO;
     }
 
     @PostMapping("/accounts/transfer")
-    public void transfer(
-            @RequestParam String accountIdSource,
-            @RequestParam String accountIdDestination,
-            @RequestParam double amount) throws BankAccountNotFoundException, BalanceNotSufficentException {
-        bankAccountService.transfer(accountIdSource, accountIdDestination, amount);
+    public void transfer(@RequestBody TransferRequestDTO transferRequestDTO) throws BankAccountNotFoundException, BalanceNotSufficentException {
+        this.bankAccountService.transfer(
+                transferRequestDTO.getAccountSource(),
+                transferRequestDTO.getAccountDestination(),
+                transferRequestDTO.getAmount()
+        );
     }
 
 }
