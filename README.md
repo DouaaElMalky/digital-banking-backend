@@ -75,3 +75,7 @@
 <h3>Après le virement bancaire</h3>
 <img src="captures/virementApresSwagger.jpg">
 <img src="captures/virementApres.jpg">
+
+----
+
+Auteur: EL MALKY Douaa
